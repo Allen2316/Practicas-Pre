@@ -1,0 +1,36 @@
+<%- include("template/header" , {titleWeb: "Categoria" }) %>
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="card">
+                    <h1>Registro</h1>
+                    <div class="card-body">
+                        <form id="frmCat">
+                            <input type="hidden" id="category_id">
+                            <div class="input-group mb-3">
+                                <input type="text" id="category" class="form-control" placeholder="Categoria"
+                                    minlength="1" maxlength="200" required>
+                            </div>
+                            <button type="submit" id="regCat" class="btn btn-success btn-block text-center">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4">
+            <h1 class="text-center">Categorias</h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblCategory">
+                        <!--  -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <%- include("template/footer") %>

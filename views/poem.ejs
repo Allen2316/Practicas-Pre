@@ -1,0 +1,46 @@
+<%- include("template/header" , {titleWeb: "Poemas" }) %>
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="card">
+                    <h1>Registro</h1>
+                    <div class="card-body">
+                        <form id="frmPoem">
+                            <input type="hidden" id="poem_id">
+                            <div class="input-group mb-3">
+                                <input type="text" id="title" class="form-control" placeholder="Titulo" minlength="1"
+                                    maxlength="200" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <textarea id="poem" class="form-control" rows="4" cols="50" placeholder="Poema"
+                                    required></textarea>
+                            </div>
+                            <div class="input-group mb-3">
+                                <select class="form-select" id="categories">
+                                    <option selected disabled>Categoria</option>
+                                </select>
+                            </div>
+                            <button type="submit" id="regPoem" class="btn btn-success btn-block text-center">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-center">Poemas</h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Poema</th>
+                            <th scope="col">Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblPoems">
+                        <!--  -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <%- include("template/footer") %>

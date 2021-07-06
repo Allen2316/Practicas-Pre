@@ -1,0 +1,91 @@
+<%- include("template/header" , {titleWeb: "Inicio" }) %>
+
+    <div class="container-fluid">
+        <h1 class="text-center">Usuarios</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">username</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Perfil</th>
+                        <th scope="col">Poemas</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tblUsers">
+
+                </tbody>
+            </table>
+            <div class="modal fade" id="modalEdit" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitulo">Edicion</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input type="hidden" id="user_id">
+                                <div class="input-group mb-3">
+                                    <input type="text" id="first_name" name="first_name" class="form-control"
+                                        placeholder="Nombre" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="last_name" name="last_name" class="form-control"
+                                        placeholder="Apellido" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email"
+                                        required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <input type="text" id="username" name="username" class="form-control"
+                                        placeholder="Username" required>
+                                </div>
+                                <!--  -->
+                                <div class="input-group mb-3">
+                                    <input type="text" id="pass_phrase" name="pass_phrase" class="form-control"
+                                        placeholder="Frase de pase" required>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <!-- <input type="file" id="profile_pic" class="form-control" placeholder="Imagen"> -->
+                                    <input type="text" id="profile_pic" name="profile_pic" class="form-control"
+                                        placeholder="Tu imagen" required>
+                                </div>
+                                <div class="md-5">
+                                    <button type="submit" id="btnGuardarEdit" class="btn btn-primary mr-2"
+                                        data-bs-dismiss="modal">Guardar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                        aria-label="Close">Cancelar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="modalDelete" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitulo">Eliminar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>¿Está seguro de eliminar este registro?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" id="modalEliminar" class="btn btn-danger" data-bs-dismiss="modal"
+                                aria-label="Close">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <%- include("template/footer") %>

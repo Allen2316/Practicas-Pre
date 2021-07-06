@@ -1,0 +1,38 @@
+<%- include("template/header" , {titleWeb: "Usuario" }) %>
+    <div class="container p-4">
+        <div class="row ">
+            <div class="col-md-8 mx-auto text-center">
+                <div class="card">
+                    <h1>Registro</h1>
+                    <div class="card-body">                        
+                        <form id="frmUser">
+                            <input type="hidden" id="user_id">
+                            <div class="input-group mb-3">
+                                <input type="text" id="first_name" name="first_name" class="form-control" placeholder="Nombre" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" id="last_name" name="last_name" class="form-control" placeholder="Apellido" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                            </div>
+                            <!--  -->
+                            <div class="input-group mb-3">
+                                <input type="text" id="pass_phrase" name="pass_phrase" class="form-control" placeholder="Frase de pase" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <!-- <input type="file" id="profile_pic" class="form-control" placeholder="Imagen"> -->
+                                <input type="text" id="profile_pic" name="profile_pic" class="form-control" placeholder="Tu imagen" required>
+                            </div>
+                            <button type="submit" id="btnRegUser" class="btn btn-success btn-block text-center">Registrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include("template/footer") %>
